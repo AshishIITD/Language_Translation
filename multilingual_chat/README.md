@@ -1,7 +1,5 @@
 # 💬 Multilingual Causal Chat GPT — 13 Indian Languages
 
-**MISN Lab, IIT Delhi | Regional Conversational AI Initiative**
-
 This directory contains a completely self-contained, isolated **Decoder-Only Causal Conversational GPT Model** (Chatbot) trained jointly on **13 regional Indian languages**. 
 
 If a user writes a prompt in *any* of the supported languages, the model understands the semantic context and generates a natural conversational reply back in that same language.
