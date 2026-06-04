@@ -1,7 +1,5 @@
 # AdiVaani NMT Assignment — Hindi ↔ Marathi Translation
 
-**MISN Lab, IIT Delhi | AdiVaani Initiative**
-
 This repository contains a complete Neural Machine Translation system for Hindi↔Marathi
 translation, implementing both classical (LSTM-based) and modern (Transformer-based) approaches.
 
@@ -167,7 +165,7 @@ Both models share these modern design choices:
 | Modification | Implementation | Justification |
 |---|---|---|
 | **RMSNorm** | `RMSNorm(dim)` | Removes mean-centering (unnecessary), ~10-15% faster, used in LLaMA/Gemma |
-| **RoPE** | `precompute_rope_freqs` + `apply_rope` | Relative position encoding — better length generalization than learned abs. pos |
+| **RoPE** | `precompute_rope_freqs` + `apply_rope` | Relative position encoding ��� better length generalization than learned abs. pos |
 | **GQA** | n_heads=6/12, n_kv_heads=2/4 | Reduces KV cache memory by n_rep×, minimal quality loss over MHA |
 | **SwiGLU FFN** | W1(SiLU) ⊙ W3, projected by W2 | Gated activation outperforms ReLU/GELU in practice (PaLM, LLaMA) |
 | **Pre-norm** | RMSNorm before each sublayer | Better gradient flow; trains without instability even without warmup |
