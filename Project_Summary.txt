@@ -1,0 +1,18 @@
+# Project Summary: Neural Machine Translation Pipeline
+
+This project implements a comprehensive deep learning pipeline for Neural Machine Translation (NMT) between Hindi and Marathi. The project is divided into two major components:
+
+## Part I: Classical Neural Machine Translation
+This part focuses on building a Seq2Seq translation framework using Recurrent Neural Networks.
+- **Architecture:** LSTM-based Encoder-Decoder with an Attention mechanism.
+- **Experimentation:** Comparative analysis between randomly initialized embeddings and pre-trained BERT embeddings (Hindi BERT and Marathi BERT) for both the source and target languages.
+- **Evaluation:** The models are evaluated based on train/validation loss, BLEU-100, and CHRF++-100 metrics.
+
+## Part II: Language Model Pretraining and Translation
+This part focuses on pretraining language models from scratch and leveraging their learned representations for machine translation.
+- **Encoder:** Pretraining a BERT-like encoder model (~110M parameters) from scratch with a custom masked language modeling pipeline.
+- **Decoder:** Pretraining a GPT-2 style decoder-only model (~124M parameters).
+- **Architectural Enhancements:** Both models incorporate modern Transformer modifications including Rotary Positional Embeddings (RoPE), Grouped Query Attention (GQA), and RMSNorm instead of standard LayerNorm.
+- **Translation:** Exploring techniques to combine the bidirectional contextual representations of the encoder and the autoregressive capabilities of the decoder to perform machine translation.
+
+The project emphasizes rigorous experimentation, architectural reasoning, ablation studies, and robust software engineering practices for deep learning systems.
