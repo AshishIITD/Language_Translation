@@ -1,0 +1,6 @@
+__pycache__/
+*.pt
+outputs/
+multilingual_chat/outputs/
+Dataset/
+.DS_Store
